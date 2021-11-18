@@ -1,5 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
+# Toolchain: GNU Tools for STM32 (9-2020-q2-update)
 ################################################################################
 
 ELF_SRCS := 
@@ -23,6 +24,7 @@ Core/Src \
 Core/Startup \
 Drivers/STM32F1xx_HAL_Driver/Src \
 FATFS/App \
+FATFS/Target \
 Middlewares/Third_Party/FatFs/src \
 Middlewares/Third_Party/FatFs/src/option \
 
