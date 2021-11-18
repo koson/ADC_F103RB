@@ -97,11 +97,11 @@ uint16_t line = 0;
 //FRESULT
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef * hadc) {
   if (flag == true) {
-	  //uint16_t counter;
+	  uint16_t counter;
 	UINT byteswritten;
-  //  for (counter = 0; counter < ADC_BUF_LEN; counter++)
-    //	f_printf( & fil, "%d|%d\n", adc_buf[counter], line++);
-    	f_write(&fil,adc_buf,sizeof(adc_buf),&byteswritten);
+    for (counter = 0; counter < ADC_BUF_LEN; counter++)
+    	f_printf( & fil, "%d|%d\n", adc_buf[counter], line++);
+//    	f_write(&fil,adc_buf,sizeof(adc_buf),&byteswritten);
   }
 }
 //Every 5s
@@ -367,7 +367,7 @@ static void MX_TIM3_Init(void)
   htim3.Instance = TIM3;
   htim3.Init.Prescaler = 36000-1;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 20000;
+  htim3.Init.Period = 10000;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
