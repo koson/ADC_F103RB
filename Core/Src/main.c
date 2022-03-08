@@ -42,7 +42,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define ADC_BUF_LEN 512
+#define ADC_BUF_LEN 256
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
